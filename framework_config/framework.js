@@ -24,10 +24,9 @@ const matchers = (exp) => ({
 
   toThrowError: (assertion) => {
     try {
-      if (assertion === 'argument is not a number'){
+      if (assertion){
         console.log('%c pass', 'background:#bf0')
       }
-
     }
     catch(error) {
       console.log('%c fail', 'background:#f00')
