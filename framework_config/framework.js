@@ -5,9 +5,11 @@ const describe = (description, fn)=> {
 }
 
 const can = (message, fn) => {
+  console.log(' ' + message)
   fn()
 }
 
+//matchers definitions
 let assertion
 const matchers = (exp) => ({
   toEq: (asssertion) => {
@@ -16,31 +18,27 @@ const matchers = (exp) => ({
       return true
     } else {
       console.log('%c fail', 'background:#f00')
-      return false 
+      return false
     }
   },
-  
-  tothrowsError: (assertion) => {
-    // let result = 'argument is not a number'
-    try { 
-      console.log('fail')
-      assertion = 'argument is not a number'
+
+  toThrowError: (assertion) => {
+    try {
+      if (assertion === 'argument is not a number'){
+        console.log('%c pass', 'background:#bf0')
+      }
+
     }
     catch(error) {
+      console.log('%c fail', 'background:#f00')
       console.log(error)
     }
     finally{
-      console.log('pass')
       return assertion
     }
   }
- 
-
 })
 
 const expect = (exp) => {
   return matchers(assertion);
 }
-
-
-

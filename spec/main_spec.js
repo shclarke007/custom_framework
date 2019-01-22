@@ -4,11 +4,13 @@ describe('Square',()=>{
       let result = square1.area()
       expect(result).toEq(36)
     });
-    can('return if argument is not a number', ()=> {
-      // let square1 = new Square('notanumber')
+    can('throw error if argument is not a number', ()=> {
       square1 = function() { new Square('notanumber')}
-      expect(square1).tothrowsError('argument is not a number')
-      // expect(square1).toCatchError('argument not a number')
+      expect(square1).toThrowError('argument is not a number')
+    });
+    can('know its size',()=>{
+      let square1 = new Square(7)
+      expect(square1.size).toEq(7)
     });
 
 })
