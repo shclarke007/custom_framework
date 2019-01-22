@@ -1,43 +1,43 @@
 //takes in a description and test code to execute
 const describe = (description, fn)=> {
-  console.log(description)
+  console.log(description + ':')
   fn()
 }
 
 const can = (message, fn) => {
-  console.log(' ' + message)
+  console.log(' -- ' + message)
   fn()
 }
 
 //matchers definitions
-let assertion
 const matchers = (exp) => ({
-  toEq: (asssertion) => {
+  toEq: (assertion) => {
     if (exp === assertion) {
-      console.log('%c pass', 'background:#bf0')
+      console.log('%c Pass! Expected: ' + exp + ' Got: ' + assertion, 'color:#25A300')
       return true
     } else {
-      console.log('%c fail', 'background:#f00')
+      console.log('%c Fail! Expected: ' + exp + ' Got: ' + assertion, 'color:#f75')
       return false
     }
   },
-
   toThrowError: (assertion) => {
+    var e;
     try {
-      if (assertion){
-        console.log('%c pass', 'background:#bf0')
-      }
+      exp();
     }
     catch(error) {
-      console.log('%c fail', 'background:#f00')
-      console.log(error)
+      e = error.message
     }
     finally{
-      return assertion
+      if (e === assertion) {
+        console.log('%c Pass! Expected: ' + e + ' Got: ' + assertion, 'color:#25A300')
+        return true
+      } else {
+        console.log('%c Fail! Expected: ' + e + ' Got: ' + assertion, 'color:#f75')
+        return false
+      }
     }
   }
 })
 
-const expect = (exp) => {
-  return matchers(assertion);
-}
+const expect = (exp) => matchers(exp)
