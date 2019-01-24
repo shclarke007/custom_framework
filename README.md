@@ -25,5 +25,5 @@ Open browser Dev tool to view console
 FooBar will run across browsers only(Safari, Chrome, FireFox, Microsoft Edge and Internet Explorer)
 
 ## Contributors
-[Rodrique](https://github.com/Rodrigue-K)
+[Rodrique](https://github.com/Rodrigue-K)  
 [Shaneil](https://github.com/learningtocode101)
