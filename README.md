@@ -16,6 +16,8 @@ Add the below links to your runner HTML file in the head:
 <script type="text/javascript" src="framework_config/framework.js"></script>
 <script type="text/javascript" src="framework_config/framework.css"></script>
 ```  
+Include your main JavaScript and test files in the bottom on the runner HTML as indicated
+
 To run your tests:
 ```
 Open Runner.html in your browser  
