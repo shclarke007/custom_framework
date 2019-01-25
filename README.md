@@ -4,7 +4,12 @@
 Build a testing framework for JS from scratch.
 
 ## Description
-Custom testing framework created for JavaScript.
+Custom testing framework created for JavaScript.  
+#### Included matchers:
+Matchers uses strict equality boolean comparison
+* toEq   
+* toThrowError  
+* toBeAnInstanceOf  
 
 ## How to use
 Included is a sample app that calculates the area of a square   
@@ -26,6 +31,15 @@ Open browser Dev tool to view console
 ## Supported platforms
 FooBar will run across browsers only(Safari, Chrome, FireFox, Microsoft Edge and Internet Explorer)
 
+## Maintainers
+Currently not maintained
+
 ## Contributors
+<<<<<<< HEAD
 [Rodrique](https://github.com/Rodrigue-K)  
 [Shaneil](https://github.com/learningtocode101)
+=======
+[Shaneil](https://github.com/learningtocode101) - Makers Student  
+[Rodrique](https://github.com/Rodrigue-K) - Makers Student  
+
+>>>>>>> 142a158d5fef268ae66071d7fcd8642f7dcd0d11
