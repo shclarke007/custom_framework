@@ -36,4 +36,4 @@ Currently not maintained
 
 ## Contributors
 [Shaneil](https://github.com/learningtocode101) - Makers Student  
-[Rodrique](https://github.com/Rodrigue-K) - Makers Student  
+[Rodrigue](https://github.com/Rodrigue-K) - Makers Student  
